@@ -1,0 +1,26 @@
+{
+  "name": "spa-routing",
+  "version": "1.0.0",
+  "description": "Simple, lightweight SPA routing.",
+  "main": "dist/spa-routing.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "build": "uglifyjs src/spa-routing.js --output dist/spa-routing.js --compress --mangle",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdboris/spa-routing.git"
+  },
+  "author": "Joseph Boris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jdboris/spa-routing/issues"
+  },
+  "homepage": "https://github.com/jdboris/spa-routing#readme",
+  "devDependencies": {
+    "uglify-js": "^3.17.4"
+  }
+}
