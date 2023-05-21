@@ -6,14 +6,7 @@
     <title>SPA Routing</title>
     <script type="module">
       import { setRoot } from "/dist/spa-routing.js";
-
-      if (window.location.hostname == "localhost") {
-        setRoot("/example");
-      }
-
-      if (window.location.hostname == "jdboris.github.io") {
-        setRoot("/spa-routing/example");
-      }
+      setRoot("/spa-routing/example");
     </script>
     <style>
       spa-route:not([active]) {
