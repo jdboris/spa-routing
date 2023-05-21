@@ -1,5 +1,9 @@
 {
   "rewrites": [
-    { "source": "spa-routing/example/**", "destination": "/example/index.html" }
+    {
+      "source": "spa-routing/example/**",
+      "destination": "/example/index.html"
+    },
+    { "source": "spa-routing/dist/:path", "destination": "/dist/:path" }
   ]
 }
