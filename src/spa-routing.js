@@ -1,3 +1,18 @@
+let root = "";
+
+/**
+ * Sets the path to which every route path will be relative.
+ * @param {string} newRoot
+ */
+export function setRoot(newRoot) {
+  root = newRoot;
+
+  syncLinksWithRoutes(
+    document.querySelectorAll("a"),
+    document.querySelectorAll("spa-route")
+  );
+}
+
 window.addEventListener("load", () => {
   // Observe for <a> elements added/removed to/from the document and sync them.
   new MutationObserver((mutations) => {
@@ -50,8 +65,8 @@ window.addEventListener("popstate", (e) => {
 class SpaRoute extends HTMLElement {
   constructor() {
     super();
-    this.path = null;
-    this.active = null;
+    this._path = null;
+    this._active = null;
     this.ignoreMutations = false;
 
     this.attachShadow({ mode: "open" });
@@ -72,6 +87,21 @@ class SpaRoute extends HTMLElement {
       }
       this.ignoreMutations = false;
     }
+  }
+
+  get active() {
+    return this._active;
+  }
+
+  set path(newValue) {
+    this.ignoreMutations = true;
+    this._path = newValue;
+    this.setAttribute("path", newValue);
+    this.ignoreMutations = false;
+  }
+
+  get path() {
+    return this._path;
   }
 
   connectedCallback() {
@@ -103,6 +133,14 @@ window.customElements.define("spa-route", SpaRoute);
  * @param {SpaRoute[]|NodeList} routes
  */
 function syncLinksWithRoutes(links, routes) {
+  links.forEach((x) => {
+    if (x.pathname && !x.pathname.startsWith(root))
+      x.pathname = root + x.pathname;
+  });
+  routes.forEach((x) => {
+    if (x.path && !x.path.startsWith(root)) x.path = root + x.path;
+  });
+
   links.forEach((link) => {
     if (link.origin == window.location.origin) {
       if (routeMatchExists(link.pathname, [...routes])) {

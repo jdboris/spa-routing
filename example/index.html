@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPA Routing</title>
+    <script type="module">
+      import { setRoot } from "/dist/spa-routing.js";
+      setRoot("/example");
+    </script>
+    <style>
+      spa-route:not([active]) {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/products">Products</a>
+    </header>
+    <main>
+      <spa-route path="/">
+        <h1>Home</h1>
+      </spa-route>
+      <spa-route path="/about">
+        <h1>About</h1>
+      </spa-route>
+      <spa-route path="/products">
+        <h1>Products</h1>
+        <a href="/products/1">Product 1</a>
+        <a href="/products/2">Product 2</a>
+        <a href="/products/3">Product 3</a>
+        <a href="/products/4">Product 4</a>
+
+        <spa-route path="/products/1">
+          <h2>Product 1</h2>
+        </spa-route>
+        <spa-route path="/products/2">
+          <h2>Product 2</h2>
+        </spa-route>
+        <spa-route path="/products/3">
+          <h2>Product 3</h2>
+        </spa-route>
+        <spa-route path="/products/4">
+          <h2>Product 4</h2>
+        </spa-route>
+      </spa-route>
+    </main>
+  </body>
+</html>
