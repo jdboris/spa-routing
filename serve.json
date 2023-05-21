@@ -8,6 +8,7 @@
       "source": "spa-routing/demo/**",
       "destination": "/demo/index.html"
     },
-    { "source": "spa-routing/dist/:path", "destination": "/dist/:path" }
+    { "source": "spa-routing/dist/:path", "destination": "/dist/:path" },
+    { "source": "spa-routing/images/:path", "destination": "/images/:path" }
   ]
 }

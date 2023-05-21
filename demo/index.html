@@ -12,35 +12,98 @@
   </head>
   <body>
     <header>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/products">Products</a>
+      <a href="/">
+        <img src="/spa-routing/images/logo.svg" /> SPA Routing Demo
+      </a>
     </header>
     <main>
+      <aside>
+        <nav>
+          <a href="/">HOME</a>
+          <a href="/about">ABOUT</a>
+          <a href="/gallery/1">GALLERY</a>
+        </nav>
+      </aside>
       <spa-route path="/">
         <h1>Home</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
       </spa-route>
       <spa-route path="/about">
         <h1>About</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
       </spa-route>
-      <spa-route path="/products">
-        <h1>Products</h1>
-        <a href="/products/1">Product 1</a>
-        <a href="/products/2">Product 2</a>
-        <a href="/products/3">Product 3</a>
-        <a href="/products/4">Product 4</a>
+      <spa-route path="/gallery">
+        <h1>Gallery</h1>
+        <nav>
+          <a href="/gallery/1">Item 1</a>
+          <a href="/gallery/2">Item 2</a>
+          <a href="/gallery/3">Item 3</a>
+          <a href="/gallery/4">Item 4</a>
+        </nav>
 
-        <spa-route path="/products/1">
-          <h2>Product 1</h2>
+        <spa-route path="/gallery/1">
+          <h2>Item 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </spa-route>
-        <spa-route path="/products/2">
-          <h2>Product 2</h2>
+        <spa-route path="/gallery/2">
+          <h2>Item 2</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </spa-route>
-        <spa-route path="/products/3">
-          <h2>Product 3</h2>
+        <spa-route path="/gallery/3">
+          <h2>Item 3</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </spa-route>
-        <spa-route path="/products/4">
-          <h2>Product 4</h2>
+        <spa-route path="/gallery/4">
+          <h2>Item 4</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </spa-route>
       </spa-route>
     </main>
