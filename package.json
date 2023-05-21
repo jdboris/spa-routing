@@ -4,7 +4,7 @@
   "description": "Simple, lightweight SPA routing.",
   "main": "dist/spa-routing.js",
   "directories": {
-    "example": "example"
+    "demo": "demo"
   },
   "scripts": {
     "start": "nodemon -x \"npm run build && serve\" --watch src",

@@ -1,0 +1,5 @@
+
+spa-route:not([active]) {
+  display: none;
+}
+
