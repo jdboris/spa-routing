@@ -129,4 +129,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [issues-url]: https://github.com/jdboris/spa-routing/issues
 [license-shield]: https://img.shields.io/github/license/jdboris/spa-routing.svg?style=for-the-badge
 [license-url]: https://github.com/jdboris/spa-routing/blob/master/LICENSE.txt
-[product-screenshot]: https://raw.githubusercontent.com/jdboris/spa-routing/e942b9abf29b7e24c94ed1b20db2074843cebddf/images/demo.gif
+[product-screenshot]: https://raw.githubusercontent.com/jdboris/spa-routing/9a23e50128f8f70104a144e3c040d1553ce7ff90/images/demo.gif
