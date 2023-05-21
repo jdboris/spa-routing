@@ -26,6 +26,8 @@ spa-route:not([active]) {
   left: -10%;
   opacity: 0;
   visibility: hidden;
+  height: 0;
+  overflow: hidden;
 }
 
 body {
@@ -61,7 +63,7 @@ body {
   > main {
     display: flex;
     height: 100%;
-    max-height: 600px;
+    max-height: 350px;
     gap: 1em;
 
     aside {
