@@ -11,8 +11,19 @@ body {
   padding: 0;
 }
 
+spa-route {
+  position: relative;
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.2s left, 0.4s opacity;
+}
+
 spa-route:not([active]) {
-  display: none;
+  position: absolute;
+  left: -10%;
+  opacity: 0;
+  visibility: hidden;
 }
 
 body {
