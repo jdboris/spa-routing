@@ -40,6 +40,20 @@ Turn your web app into a Single Page App quickly and easily without tons of refa
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Prerequisites
+
+For initial navigation to your routes (i.e. visiting `example.com/route` directly) to work, you'll need to configure your server to direct all traffic to your app.
+
+#### Example (express.js)
+
+```javascript
+app.get(/.*/, (req, res) => {
+  res.sendFile(`${__dirname}/index.html`);
+});
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Installation
 
 #### CDN
