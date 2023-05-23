@@ -9,7 +9,10 @@
   "scripts": {
     "start": "nodemon -x \"npm run build && serve\" --watch src",
     "build": "uglifyjs src/spa-routing.js --output dist/spa-routing.js --compress --mangle",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "publish:patch": "npm version patch && npm publish",
+    "publish:minor": "npm version minor && npm publish",
+    "publish:major": "npm version major && npm publish"
   },
   "repository": {
     "type": "git",
