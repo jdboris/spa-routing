@@ -168,6 +168,6 @@ function routeMatchExists(path, routes) {
  */
 function pushStateOnClick(e) {
   e.preventDefault();
-  history.pushState(null, null, e.target.pathname);
+  history.pushState(null, null, e.currentTarget.pathname);
   window.dispatchEvent(new PopStateEvent("popstate"));
 }
