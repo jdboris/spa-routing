@@ -17,7 +17,8 @@ export function setRoot(newRoot) {
 if (location.pathname.match(/\.html$/)) {
   const url = new URL(location);
   url.pathname = url.pathname.replace(/\/.*\.html$/, "");
-  history.pushState(null, null, url.pathname);
+  history.replaceState(null, null, url.pathname);
+  window.dispatchEvent(new PopStateEvent("popstate"));
 }
 
 window.addEventListener("load", () => {
@@ -69,6 +70,7 @@ window.addEventListener("popstate", (e) => {
 
   if (!routes.length && window.location.pathname != "/") {
     history.replaceState(null, null, root);
+    window.dispatchEvent(new PopStateEvent("popstate"));
   }
 });
 
