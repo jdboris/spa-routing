@@ -1,4 +1,4 @@
-let root = "";
+let root = "/";
 
 /**
  * Sets the path to which every route path will be relative.
@@ -11,6 +11,13 @@ export function setRoot(newRoot) {
     document.querySelectorAll("a"),
     document.querySelectorAll("spa-route")
   );
+}
+
+// Remove filename from address
+if (location.pathname.match(/\.html$/)) {
+  const url = new URL(location);
+  url.pathname = url.pathname.replace(/\/.*\.html$/, "");
+  history.pushState(null, null, url.pathname);
 }
 
 window.addEventListener("load", () => {
@@ -53,10 +60,16 @@ window.addEventListener("popstate", (e) => {
     .map((x) => `spa-route[path='${x}']`)
     .join(", ");
 
+  const routes = document.querySelectorAll(selector);
+
   // Activate all matching routes
-  document.querySelectorAll(selector).forEach((x) => {
+  routes.forEach((x) => {
     x.active = true;
   });
+
+  if (!routes.length && window.location.pathname != "/") {
+    history.replaceState(null, null, root);
+  }
 });
 
 /**
