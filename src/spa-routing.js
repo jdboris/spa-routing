@@ -68,7 +68,7 @@ window.addEventListener("popstate", (e) => {
     x.active = true;
   });
 
-  if (!routes.length && window.location.pathname != "/") {
+  if (!routes.length && window.location.pathname != root) {
     history.replaceState(null, null, root);
     window.dispatchEvent(new PopStateEvent("popstate"));
   }
