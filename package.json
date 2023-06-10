@@ -2,7 +2,7 @@
   "name": "spa-routing",
   "version": "1.2.0",
   "description": "Simple, lightweight SPA routing.",
-  "main": "index.js",
+  "main": "./dist/spa-routing.js",
   "directories": {
     "demo": "demo"
   },
