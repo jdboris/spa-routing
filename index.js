@@ -1,1 +1,1 @@
-export * from "./dist/spa-routing.js";
+export * from "dist/spa-routing.js";
