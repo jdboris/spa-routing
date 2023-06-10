@@ -52,20 +52,19 @@ window.addEventListener("popstate", (e) => {
     .querySelectorAll("spa-route[active]")
     .forEach((x) => (x.active = false));
 
-  // Form a selector that matches all routes in the trail...
-  // Example: "spa-route[path='/products'], spa-route[path='/products/1']"
-  const selector = window.location.pathname
-    .split("/")
-    .slice(1)
-    .reduce((total, x) => [...total, `${total.at(-1) || ""}/${x}`], [])
-    .map((x) => `spa-route[path='${x}']`)
-    .join(", ");
+  const routes = document.querySelectorAll(
+    `spa-route[path='${window.location.pathname}']`
+  );
 
-  const routes = document.querySelectorAll(selector);
-
-  // Activate all matching routes
   routes.forEach((x) => {
-    x.active = true;
+    // Activate this route and all ancestor routes...
+    for (
+      let route = x;
+      route;
+      route = route.parentElement.closest("spa-route")
+    ) {
+      route.active = true;
+    }
   });
 
   if (!routes.length && window.location.pathname != root) {
