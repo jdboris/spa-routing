@@ -60,7 +60,7 @@ app.get(/.*/, (req, res) => {
 
 ```html
 <script
-  src="https://cdn.jsdelivr.net/gh/jdboris/spa-routing@latest/dist/spa-routing.js"
+  src="https://cdn.jsdelivr.net/npm/spa-routing@latest"
   type="module"
 ></script>
 ```
@@ -75,7 +75,7 @@ app.get(/.*/, (req, res) => {
 
    ```html
    <script type="module">
-     import { setRoot } from "https://cdn.jsdelivr.net/gh/jdboris/spa-routing@latest/dist/spa-routing.js";
+     import { setRoot } from "https://cdn.jsdelivr.net/npm/spa-routing@latest";
      setRoot("/example/root");
    </script>
    ```
