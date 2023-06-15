@@ -27,7 +27,7 @@ window.addEventListener("load", () => {
     mutations.forEach((mutation) => {
       if (
         [...mutation.addedNodes, ...mutation.removedNodes].find(
-          (x) => x.tagName == "A"
+          (x) => x.tagName == "A" || (x.querySelector && x.querySelector("a"))
         )
       ) {
         syncLinksWithRoutes(
